@@ -6,6 +6,7 @@ class CustomUser(AbstractUser):
     email = models.EmailField(unique=True)
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
+    #check_password = models.CharField(max_length=100)
 
     groups = models.ManyToManyField(
         'auth.Group',
